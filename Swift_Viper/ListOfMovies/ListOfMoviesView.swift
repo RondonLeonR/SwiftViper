@@ -19,9 +19,10 @@ class ListOfMoviesView: UIViewController {
         return tableView
     }()
     
-    var presenter: ListOfMoviesPresenter?
+    private let presenter: ListOfMoviesPresentable
     
-    init() {
+    init(presenter: ListOfMoviesPresentable) {
+        self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -35,7 +36,7 @@ class ListOfMoviesView: UIViewController {
         setupTableView()
         
         // Llamo al Presenter para traer la info 
-        presenter?.onViewAppear()
+        presenter.onViewAppear()
     }
     
     // Set vista de la tabla y agrego constraints
@@ -55,12 +56,12 @@ class ListOfMoviesView: UIViewController {
 
 extension ListOfMoviesView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        presenter!.models.count
+        presenter.viewModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCellView", for: indexPath) as! MovieCellView
-        let model = presenter!.models[indexPath.row]
+        let model = presenter.viewModels[indexPath.row]
         
         // Configuro la celda con los datos del API
         cell.configure(model: model)
@@ -70,7 +71,7 @@ extension ListOfMoviesView: UITableViewDataSource {
 }
 
 extension ListOfMoviesView: ListOfMoviesUI {
-    func update(movies: [PopularMovieEntity]) {
+    func update(movies: [ViewModel]) {
         // Se usa para refrescar el UITableView una vez que tengo los datos
         DispatchQueue.main.async {
             self.moviesTableView.reloadData()

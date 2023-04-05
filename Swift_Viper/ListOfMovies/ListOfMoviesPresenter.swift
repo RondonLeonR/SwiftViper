@@ -7,28 +7,40 @@
 
 import Foundation
 
-protocol ListOfMoviesUI: AnyObject {
-    func update(movies: [PopularMovieEntity])
+// Creando protocolo para testear modulos
+protocol ListOfMoviesPresentable: AnyObject {
+    var ui: ListOfMoviesUI? { get }
+    var viewModels: [ViewModel] { get }
+    func onViewAppear()
 }
 
-class ListOfMoviesPresenter {
+protocol ListOfMoviesUI: AnyObject {
+    func update(movies: [ViewModel])
+}
+
+class ListOfMoviesPresenter: ListOfMoviesPresentable {
     
-    var ui: ListOfMoviesUI?
+    weak var ui: ListOfMoviesUI?
     
-    private let listOfMoviesInteractor: ListOfMoviesInteractor
-    var models: [PopularMovieEntity] = []
+    private let listOfMoviesInteractor: ListOfMoviesInteractable
+    var viewModels: [ViewModel] = []
+    private let mapper: Mapper
     
-    init(listOfMoviesInteractor: ListOfMoviesInteractor) {
+    init(listOfMoviesInteractor: ListOfMoviesInteractable, mapper: Mapper = Mapper()) {
         self.listOfMoviesInteractor = listOfMoviesInteractor
+        self.mapper = mapper
     }
     
     func onViewAppear() {
         Task {
             // Llamo al Interactor para traer la info de la API
-            models = await listOfMoviesInteractor.getListOfMovies().results
+            let models = await listOfMoviesInteractor.getListOfMovies().results
+            
+            // Mapeo de Model para descartar info innecesaria
+            viewModels = models.map(mapper.map(entity:))
             
             // Devuelvo la info a la View
-            ui?.update(movies: models)
+            ui?.update(movies: viewModels)
         }
     }
     

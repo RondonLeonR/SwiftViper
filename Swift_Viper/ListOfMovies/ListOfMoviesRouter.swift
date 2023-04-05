@@ -12,12 +12,13 @@ class ListOfMoviesRouter {
     
     // Llamar a la View para iniciar el camino
     func showListOfMovies(window: UIWindow?) {
-        let view = ListOfMoviesView()
+        // Desde aca puedo mockear la info llamando al (ListOfMoviesInteractorMock)
         let interactor = ListOfMoviesInteractor()
         let presenter = ListOfMoviesPresenter(listOfMoviesInteractor: interactor)
         
+        let view = ListOfMoviesView(presenter: presenter)
         presenter.ui = view
-        view.presenter = presenter
+        //view.presenter = presenter
         
         window?.rootViewController = view
         window?.makeKeyAndVisible()

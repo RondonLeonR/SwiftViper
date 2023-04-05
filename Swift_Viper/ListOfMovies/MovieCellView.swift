@@ -71,9 +71,9 @@ class MovieCellView: UITableViewCell {
     }
     
     // Set info de la API que nos pasa el Presenter
-    func configure(model: PopularMovieEntity) {
+    func configure(model: ViewModel) {
         // Uso el Kingfisher para ver la imagen
-        movieImageView.kf.setImage(with: URL(string: "https://image.tmdb.org/t/p/w200" + model.imageURL))
+        movieImageView.kf.setImage(with: model.imageURL)
         
         movieName.text = model.title
         movieDescription.text = model.overview

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB1D649829DE281300BC0312 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1D649729DE281300BC0312 /* ViewModel.swift */; };
+		DB1D649A29DE29AD00BC0312 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1D649929DE29AD00BC0312 /* Mapper.swift */; };
 		DB3A481C29D8322700A90D71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3A481B29D8322700A90D71 /* AppDelegate.swift */; };
 		DB3A481E29D8322700A90D71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3A481D29D8322700A90D71 /* SceneDelegate.swift */; };
 		DB3A482029D8322700A90D71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3A481F29D8322700A90D71 /* ViewController.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB1D649729DE281300BC0312 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		DB1D649929DE29AD00BC0312 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 		DB3A481829D8322700A90D71 /* Swift_Viper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Viper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3A481B29D8322700A90D71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB3A481D29D8322700A90D71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB1D649629DE27FB00BC0312 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DB1D649729DE281300BC0312 /* ViewModel.swift */,
+				DB1D649929DE29AD00BC0312 /* Mapper.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		DB3A480F29D8322700A90D71 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +99,7 @@
 			children = (
 				DB3A483029D8329800A90D71 /* ListOfMoviesView.swift */,
 				DB3A483D29D83B9300A90D71 /* MovieCellView.swift */,
+				DB1D649629DE27FB00BC0312 /* ViewModel */,
 				DB3A483229D832BD00A90D71 /* ListOfMoviesPresenter.swift */,
 				DB3A483429D832E600A90D71 /* ListOfMoviesInteractor.swift */,
 				DB3A483629D8331600A90D71 /* ListOfMoviesRouter.swift */,
@@ -182,6 +196,8 @@
 				DB3A483129D8329800A90D71 /* ListOfMoviesView.swift in Sources */,
 				DB3A482029D8322700A90D71 /* ViewController.swift in Sources */,
 				DB3A483529D832E600A90D71 /* ListOfMoviesInteractor.swift in Sources */,
+				DB1D649829DE281300BC0312 /* ViewModel.swift in Sources */,
+				DB1D649A29DE29AD00BC0312 /* Mapper.swift in Sources */,
 				DB3A483E29D83B9300A90D71 /* MovieCellView.swift in Sources */,
 				DB3A483A29D8352100A90D71 /* PopularMovieEntity.swift in Sources */,
 				DB3A483329D832BD00A90D71 /* ListOfMoviesPresenter.swift in Sources */,
