@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB1A15C129DFAE6500D109C3 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1A15C029DFAE6500D109C3 /* DetailView.swift */; };
+		DB1A15C329DFAE7400D109C3 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1A15C229DFAE7400D109C3 /* DetailPresenter.swift */; };
+		DB1A15C529DFAE8500D109C3 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1A15C429DFAE8500D109C3 /* DetailInteractor.swift */; };
+		DB1A15C729DFAE9100D109C3 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1A15C629DFAE9100D109C3 /* DetailRouter.swift */; };
+		DB1A15CA29DFAF5800D109C3 /* DetailMovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1A15C929DFAF5800D109C3 /* DetailMovieEntity.swift */; };
+		DB1A15CD29DFB1F000D109C3 /* DetailMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1A15CC29DFB1F000D109C3 /* DetailMovieViewModel.swift */; };
+		DB1A15CF29DFB24300D109C3 /* MapperDetailMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1A15CE29DFB24300D109C3 /* MapperDetailMovieViewModel.swift */; };
 		DB1D649829DE281300BC0312 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1D649729DE281300BC0312 /* ViewModel.swift */; };
 		DB1D649A29DE29AD00BC0312 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1D649929DE29AD00BC0312 /* Mapper.swift */; };
 		DB3A481C29D8322700A90D71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3A481B29D8322700A90D71 /* AppDelegate.swift */; };
@@ -25,6 +32,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB1A15C029DFAE6500D109C3 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		DB1A15C229DFAE7400D109C3 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		DB1A15C429DFAE8500D109C3 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		DB1A15C629DFAE9100D109C3 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		DB1A15C929DFAF5800D109C3 /* DetailMovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieEntity.swift; sourceTree = "<group>"; };
+		DB1A15CC29DFB1F000D109C3 /* DetailMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieViewModel.swift; sourceTree = "<group>"; };
+		DB1A15CE29DFB24300D109C3 /* MapperDetailMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperDetailMovieViewModel.swift; sourceTree = "<group>"; };
 		DB1D649729DE281300BC0312 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		DB1D649929DE29AD00BC0312 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 		DB3A481829D8322700A90D71 /* Swift_Viper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Viper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +69,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB1A15BF29DFAE3500D109C3 /* DetailMovie */ = {
+			isa = PBXGroup;
+			children = (
+				DB1A15C029DFAE6500D109C3 /* DetailView.swift */,
+				DB1A15CB29DFB1CA00D109C3 /* ViewModel */,
+				DB1A15C229DFAE7400D109C3 /* DetailPresenter.swift */,
+				DB1A15C429DFAE8500D109C3 /* DetailInteractor.swift */,
+				DB1A15C629DFAE9100D109C3 /* DetailRouter.swift */,
+				DB1A15C829DFAE9C00D109C3 /* Entities */,
+			);
+			path = DetailMovie;
+			sourceTree = "<group>";
+		};
+		DB1A15C829DFAE9C00D109C3 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				DB1A15C929DFAF5800D109C3 /* DetailMovieEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		DB1A15CB29DFB1CA00D109C3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DB1A15CC29DFB1F000D109C3 /* DetailMovieViewModel.swift */,
+				DB1A15CE29DFB24300D109C3 /* MapperDetailMovieViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		DB1D649629DE27FB00BC0312 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +130,7 @@
 				DB3A481B29D8322700A90D71 /* AppDelegate.swift */,
 				DB3A481D29D8322700A90D71 /* SceneDelegate.swift */,
 				DB3A481F29D8322700A90D71 /* ViewController.swift */,
+				DB1A15BF29DFAE3500D109C3 /* DetailMovie */,
 				DB3A482F29D8326100A90D71 /* ListOfMovies */,
 				DB3A482429D8322800A90D71 /* Assets.xcassets */,
 				DB3A482629D8322800A90D71 /* LaunchScreen.storyboard */,
@@ -194,12 +239,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB3A483129D8329800A90D71 /* ListOfMoviesView.swift in Sources */,
+				DB1A15C729DFAE9100D109C3 /* DetailRouter.swift in Sources */,
 				DB3A482029D8322700A90D71 /* ViewController.swift in Sources */,
+				DB1A15CF29DFB24300D109C3 /* MapperDetailMovieViewModel.swift in Sources */,
 				DB3A483529D832E600A90D71 /* ListOfMoviesInteractor.swift in Sources */,
+				DB1A15CD29DFB1F000D109C3 /* DetailMovieViewModel.swift in Sources */,
 				DB1D649829DE281300BC0312 /* ViewModel.swift in Sources */,
 				DB1D649A29DE29AD00BC0312 /* Mapper.swift in Sources */,
+				DB1A15CA29DFAF5800D109C3 /* DetailMovieEntity.swift in Sources */,
+				DB1A15C329DFAE7400D109C3 /* DetailPresenter.swift in Sources */,
+				DB1A15C529DFAE8500D109C3 /* DetailInteractor.swift in Sources */,
 				DB3A483E29D83B9300A90D71 /* MovieCellView.swift in Sources */,
 				DB3A483A29D8352100A90D71 /* PopularMovieEntity.swift in Sources */,
+				DB1A15C129DFAE6500D109C3 /* DetailView.swift in Sources */,
 				DB3A483329D832BD00A90D71 /* ListOfMoviesPresenter.swift in Sources */,
 				DB3A483729D8331600A90D71 /* ListOfMoviesRouter.swift in Sources */,
 				DB3A481C29D8322700A90D71 /* AppDelegate.swift in Sources */,
